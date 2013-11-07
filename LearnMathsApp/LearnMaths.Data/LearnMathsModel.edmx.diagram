@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="7982af5e76a642d8b692c90568c52221" Name="Diagram1">
+        <EntityTypeShape EntityType="db95e1649d89d04f53bfe6a26f0095fb22Model.Answer" Width="1.5" PointX="5.25" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="db95e1649d89d04f53bfe6a26f0095fb22Model.Category" Width="1.5" PointX="3.125" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="db95e1649d89d04f53bfe6a26f0095fb22Model.CoverLevel" Width="1.5" PointX="3.25" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="db95e1649d89d04f53bfe6a26f0095fb22Model.Level" Width="1.5" PointX="1.125" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="db95e1649d89d04f53bfe6a26f0095fb22Model.Question" Width="1.5" PointX="5.25" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="db95e1649d89d04f53bfe6a26f0095fb22Model.Record" Width="1.5" PointX="3.125" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="db95e1649d89d04f53bfe6a26f0095fb22Model.sysdiagram" Width="1.5" PointX="7.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="db95e1649d89d04f53bfe6a26f0095fb22Model.UserRole" Width="1.5" PointX="0.75" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="db95e1649d89d04f53bfe6a26f0095fb22Model.User" Width="1.5" PointX="1" PointY="3.75" IsExpanded="true" />
+        <AssociationConnector Association="db95e1649d89d04f53bfe6a26f0095fb22Model.FK_Answers_Questions" ManuallyRouted="false" />
+        <AssociationConnector Association="db95e1649d89d04f53bfe6a26f0095fb22Model.FK_Categories_Levels" ManuallyRouted="false" />
+        <AssociationConnector Association="db95e1649d89d04f53bfe6a26f0095fb22Model.FK_Questions_Categories" ManuallyRouted="false" />
+        <AssociationConnector Association="db95e1649d89d04f53bfe6a26f0095fb22Model.FK_Records_Categories" ManuallyRouted="false" />
+        <AssociationConnector Association="db95e1649d89d04f53bfe6a26f0095fb22Model.FK_Records_CoverLevels" ManuallyRouted="false" />
+        <AssociationConnector Association="db95e1649d89d04f53bfe6a26f0095fb22Model.FK_Users_Levels" ManuallyRouted="false" />
+        <AssociationConnector Association="db95e1649d89d04f53bfe6a26f0095fb22Model.FK_Records_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="db95e1649d89d04f53bfe6a26f0095fb22Model.FK_Users_UserRoles" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
