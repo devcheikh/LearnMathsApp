@@ -159,6 +159,14 @@ namespace LearnMaths.Services.Controllers
                       throw new InvalidOperationException("Invalid sessionKey");
                   }
 
+                  var records = this.Data.Records.All().Where(x => x.UserId == user.Id).ToList();
+                  foreach (Record record in records)
+                  {
+                      this.Data.Records.Delete(record);
+                  }
+
+                  this.Data.SaveChanges();
+
                   var levelRank = user.Level.Rank;
                   var upLevel = this.Data.Levels.All().Where(x => x.Rank == levelRank + 1).FirstOrDefault();
                   if (upLevel == null)
