@@ -30,7 +30,7 @@ namespace LearnMaths.Services.Controllers
                 }
 
                 var questions = this.Data.Questions.All().Where(x => x.CategoryId == id).
-                    OrderBy(x => new Guid()).Take(NumberQuestions).Select(QuestionModel.FromQuestion).ToList();
+                    OrderBy(x => Guid.NewGuid()).Take(NumberQuestions).Select(QuestionModel.FromQuestion).ToList();
 
                 return questions;
             });
