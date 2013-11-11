@@ -35,8 +35,17 @@ namespace LearnMaths.Services.Controllers
                       throw new InvalidOperationException("Invalid sessionKey");
                   }
 
-                  var categoryRank = this.Data.Records.All().Where(x => x.UserId == user.Id).
-                      Select(x => x.Category).OrderByDescending(x => x.Rank).FirstOrDefault().Rank;
+                  double categoryRank;
+                  var category = this.Data.Records.All().Where(x => x.UserId == user.Id).
+                      Select(x => x.Category).OrderByDescending(x => x.Rank).FirstOrDefault();
+                  if (category != null)
+                  {
+                      categoryRank = category.Rank;
+                  }
+                  else
+                  {
+                      categoryRank = 0;
+                  }
 
                   var nextCategory = this.Data.Categories.All().
                       Where(x => x.Level.Name == model.Level).FirstOrDefault(x => x.Rank == categoryRank + 1);
