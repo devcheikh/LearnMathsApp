@@ -215,7 +215,7 @@ namespace LearnMaths.Services.Controllers
 
         [ActionName("delete")]
         [HttpPost]
-        public HttpResponseMessage PostEditQuestion(int id,
+        public HttpResponseMessage PostDeleteQuestion(int id,
             [ValueProvider(typeof(HeaderValueProviderFactory<string>))] string sessionKey)
         {
             var responseMsg = this.PerformOperationAndHandleExceptions(
