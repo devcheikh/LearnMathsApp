@@ -143,6 +143,7 @@
     <Compile Include="Attributes\HeaderValueProviderFactory.cs" />
     <Compile Include="Controllers\AnswersController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\CategoriesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\QuestionsController.cs" />
     <Compile Include="Controllers\RecordsController.cs" />
@@ -152,6 +153,8 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AnswerModel.cs" />
+    <Compile Include="Models\CategoryModel.cs" />
+    <Compile Include="Models\QuestionFullModel.cs" />
     <Compile Include="Models\QuestionModel.cs" />
     <Compile Include="Models\RecordCoverModel.cs" />
     <Compile Include="Models\RecordCoverResponseModel.cs" />
