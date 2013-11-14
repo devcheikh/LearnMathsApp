@@ -44,7 +44,9 @@ namespace LearnMaths.Services.Models
                     AText = question.Answers.OrderBy(x => x.Id).Take(1).FirstOrDefault().Text,
                     BText = question.Answers.OrderBy(x => x.Id).Skip(1).Take(1).FirstOrDefault().Text,
                     CText = question.Answers.OrderBy(x => x.Id).Skip(2).Take(1).FirstOrDefault().Text,
-                    Correct = GetCorrectString(question)
+                    Correct = 
+                    question.Answers.OrderBy(x => x.Id).Take(1).FirstOrDefault().IsCorrect ? "A" : 
+                    question.Answers.OrderBy(x => x.Id).Skip(1).Take(1).FirstOrDefault().IsCorrect ? "B" : "C"
                 };
             }
         }
