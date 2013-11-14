@@ -29,8 +29,9 @@ namespace LearnMaths.Services.Controllers
                 {
                     throw new InvalidOperationException("Invalid sessionKey");
                 }
-
-                var questions = this.Data.Questions.All().Where(x => x.CategoryId == id).
+				
+				var categoryId = this.Data.Records.All().Where(x => x.Id == id).FirstOrDefault().CategoryId;
+                var questions = this.Data.Questions.All().Where(x => x.CategoryId == categoryId).
                     OrderBy(x => Guid.NewGuid()).Take(NumberQuestions).Select(QuestionModel.FromQuestion).ToList();
 
                 return questions;
