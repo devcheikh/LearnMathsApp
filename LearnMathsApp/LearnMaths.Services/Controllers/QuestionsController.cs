@@ -231,6 +231,13 @@ namespace LearnMaths.Services.Controllers
                   }
 
                   var question = this.Data.Questions.All().Where(x => x.Id == id).FirstOrDefault();
+                  var answers = question.Answers.ToList();
+                  for (int count = 0; count < answers.Count; count++)
+                  {
+                      this.Data.Answers.Delete(answers[count]);
+                      this.Data.SaveChanges();
+                  }
+
                   this.Data.Questions.Delete(question);
                   this.Data.SaveChanges();
 
