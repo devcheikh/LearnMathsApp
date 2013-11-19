@@ -50,7 +50,7 @@ namespace LearnMaths.Services.Controllers
                 var user = this.Data.Users.All().FirstOrDefault(
                     x => x.SessionKey == sessionKey);
 
-                if (user == null || sessionKey == string.Empty)
+                if (user == null || sessionKey == string.Empty || user.UserRole.Role != "Admin")
                 {
                     throw new InvalidOperationException("Invalid sessionKey");
                 }
@@ -74,7 +74,7 @@ namespace LearnMaths.Services.Controllers
                 var user = this.Data.Users.All().FirstOrDefault(
                     x => x.SessionKey == sessionKey);
 
-                if (user == null || sessionKey == string.Empty)
+                if (user == null || sessionKey == string.Empty || user.UserRole.Role != "Admin")
                 {
                     throw new InvalidOperationException("Invalid sessionKey");
                 }
@@ -99,7 +99,7 @@ namespace LearnMaths.Services.Controllers
                   var user = this.Data.Users.All().FirstOrDefault(
                       x => x.SessionKey == sessionKey);
 
-                  if (user == null || sessionKey == string.Empty)
+                  if (user == null || sessionKey == string.Empty || user.UserRole.Role != "Admin")
                   {
                       throw new InvalidOperationException("Invalid sessionKey");
                   }
@@ -170,7 +170,7 @@ namespace LearnMaths.Services.Controllers
                   var user = this.Data.Users.All().FirstOrDefault(
                       x => x.SessionKey == sessionKey);
 
-                  if (user == null || sessionKey == string.Empty)
+                  if (user == null || sessionKey == string.Empty || user.UserRole.Role != "Admin")
                   {
                       throw new InvalidOperationException("Invalid sessionKey");
                   }
@@ -225,7 +225,7 @@ namespace LearnMaths.Services.Controllers
                   var user = this.Data.Users.All().FirstOrDefault(
                       x => x.SessionKey == sessionKey);
 
-                  if (user == null || sessionKey == string.Empty)
+                  if (user == null || sessionKey == string.Empty || user.UserRole.Role != "Admin")
                   {
                       throw new InvalidOperationException("Invalid sessionKey");
                   }
