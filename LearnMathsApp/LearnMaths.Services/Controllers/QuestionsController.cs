@@ -74,7 +74,7 @@ namespace LearnMaths.Services.Controllers
                 var user = this.Data.Users.All().FirstOrDefault(
                     x => x.SessionKey == sessionKey);
 
-                if (user == null || sessionKey == string.Empty || user.UserRole.Role != "Admin")
+                if (user == null || sessionKey == string.Empty)
                 {
                     throw new InvalidOperationException("Invalid sessionKey");
                 }
